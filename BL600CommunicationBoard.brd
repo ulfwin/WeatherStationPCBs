@@ -93,7 +93,7 @@
 <wire x1="70.79" y1="-1.27" x2="70.79" y2="66.03" width="0" layer="20"/>
 <wire x1="70.79" y1="66.03" x2="5.08" y2="66.03" width="0" layer="20"/>
 <wire x1="5.08" y1="66.03" x2="5.08" y2="-1.27" width="0" layer="20"/>
-<text x="11.43" y="62.23" size="1.778" layer="1" font="vector" ratio="20">BL600 Communication Board v1.0.0</text>
+<text x="17.78" y="62.23" size="1.778" layer="21" ratio="20">BL600 Communication Board v1.0.0</text>
 </plain>
 <libraries>
 <library name="rcl">
