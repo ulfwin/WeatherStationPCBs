@@ -16771,16 +16771,14 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="R5" library="rcl" deviceset="R-EU_" device="0207/10" value="0"/>
-<part name="R6" library="rcl" deviceset="R-EU_" device="0207/10" value="0"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="rcl" deviceset="R-EU_" device="0207/10" value="0"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="GND17" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16833,16 +16831,14 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <instance part="GND8" gate="1" x="195.58" y="53.34"/>
 <instance part="GND9" gate="1" x="218.44" y="38.1"/>
 <instance part="GND10" gate="1" x="165.1" y="-2.54"/>
-<instance part="R5" gate="G$1" x="127" y="-35.56"/>
-<instance part="R6" gate="G$1" x="127" y="-43.18"/>
 <instance part="GND11" gate="1" x="124.46" y="-22.86"/>
 <instance part="GND12" gate="1" x="185.42" y="-22.86"/>
 <instance part="GND13" gate="1" x="193.04" y="-38.1"/>
-<instance part="GND14" gate="1" x="119.38" y="-35.56" rot="R270"/>
-<instance part="GND15" gate="1" x="119.38" y="-43.18" rot="R270"/>
+<instance part="GND14" gate="1" x="129.54" y="-35.56" rot="R270"/>
+<instance part="GND15" gate="1" x="129.54" y="-43.18" rot="R270"/>
 <instance part="GND16" gate="1" x="165.1" y="-78.74"/>
-<instance part="R2" gate="G$1" x="182.88" y="-58.42"/>
-<instance part="GND7" gate="1" x="190.5" y="-58.42" rot="R90"/>
+<instance part="GND7" gate="1" x="180.34" y="-58.42" rot="R90"/>
+<instance part="GND17" gate="1" x="88.9" y="12.7"/>
 </instances>
 <busses>
 </busses>
@@ -16964,14 +16960,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="GND13" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="R5" gate="G$1" pin="1"/>
-<pinref part="GND14" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="R6" gate="G$1" pin="1"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="GND3"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 <pinref part="IC1" gate="G$1" pin="GND1"/>
@@ -16982,8 +16970,20 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <junction x="165.1" y="-76.2"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="IC1" gate="G$1" pin="T1IN"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="T2IN"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="R2IN"/>
 <pinref part="GND7" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="SV4" gate="G$1" pin="9"/>
+<pinref part="GND17" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -17061,38 +17061,13 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="IC1" gate="G$1" pin="R1IN"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="SV4" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="25.4" x2="116.84" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="25.4" x2="116.84" y2="40.64" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="T1IN"/>
-<wire x1="116.84" y1="40.64" x2="132.08" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="SV4" gate="G$1" pin="4"/>
-<wire x1="104.14" y1="22.86" x2="119.38" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="22.86" x2="119.38" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="T2IN"/>
-<wire x1="119.38" y1="33.02" x2="132.08" y2="33.02" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="SV4" gate="G$1" pin="6"/>
 <wire x1="104.14" y1="20.32" x2="121.92" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="20.32" x2="121.92" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="G$1" pin="R1OUT"/>
-<wire x1="121.92" y1="25.4" x2="132.08" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="SV4" gate="G$1" pin="8"/>
+<wire x1="121.92" y1="20.32" x2="121.92" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="R2OUT"/>
-<wire x1="104.14" y1="17.78" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="17.78" x2="132.08" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -17133,18 +17108,6 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 <pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="177.8" y1="45.72" x2="185.42" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="45.72" x2="185.42" y2="43.18" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="T1IN"/>
-<pinref part="R5" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$15" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="T2IN"/>
-<pinref part="R6" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$16" class="0">
@@ -17270,8 +17233,27 @@ Source: http://www.diodes.com/datasheets/ds23001.pdf</description>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="R2IN"/>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="SV4" gate="G$1" pin="8"/>
+<wire x1="104.14" y1="17.78" x2="119.38" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="119.38" y1="17.78" x2="119.38" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="T2IN"/>
+<wire x1="119.38" y1="33.02" x2="132.08" y2="33.02" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="SV4" gate="G$1" pin="4"/>
+<wire x1="104.14" y1="22.86" x2="116.84" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="22.86" x2="116.84" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="G$1" pin="T1IN"/>
+<wire x1="116.84" y1="40.64" x2="132.08" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="SV4" gate="G$1" pin="2"/>
+<pinref part="IC3" gate="G$1" pin="R1OUT"/>
+<wire x1="104.14" y1="25.4" x2="132.08" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
