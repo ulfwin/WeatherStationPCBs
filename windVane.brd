@@ -89,6 +89,11 @@
 <board>
 <plain>
 <circle x="12.5" y="12.5" radius="12.5" width="0.254" layer="20"/>
+<text x="16.5" y="17" size="2.1844" layer="21">N</text>
+<wire x1="17.5" y1="20" x2="17.5" y2="23" width="0.3048" layer="21"/>
+<wire x1="16.5" y1="22" x2="17.5" y2="23" width="0.3048" layer="21"/>
+<wire x1="17.5" y1="23" x2="18.5" y2="22" width="0.3048" layer="21"/>
+<text x="2" y="15.5" size="0.8128" layer="21" rot="R45">Wind Vane PCB v1.0.0</text>
 </plain>
 <libraries>
 <library name="ulf">
